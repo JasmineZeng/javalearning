@@ -1,3 +1,4 @@
+package chapter1;
 /*
  * 专家术语学习机
  */

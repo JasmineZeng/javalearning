@@ -1,3 +1,4 @@
+package chapter1;
 /*
  * 三种循环结构
  * 1. while循环
