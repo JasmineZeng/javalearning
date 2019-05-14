@@ -3,6 +3,10 @@
  */
 package chapter5;
 
+import java.util.ArrayList;
+
+import chapter6.DotCom;
+
 public class SimpleDotComGame {
 	
 	public static void main (String[] args) {
@@ -13,12 +17,24 @@ public class SimpleDotComGame {
 		//帮助取得玩家输入的对象
 		GameHelper helper = new GameHelper();
 		
-		//创建dot com对象
-		SimpleDotCom theDotCom = new SimpleDotCom();
+//		//创建dot com对象
+//		SimpleDotCom theDotCom = new SimpleDotCom();
+		//创建使用ArrayList的dot com对象
+		DotCom theDotCom = new DotCom();
+		
 		//用随机数产生第一格的位置（0-4）
 		int randomNum = (int) (Math.random() * 5);
-		//根据上述产生的随机数，生成dot com的位置数组
-		int[] locations = {randomNum, randomNum+1, randomNum+2};
+//		//根据上述产生的随机数，生成dot com的位置数组
+//		int[] locations = {randomNum, randomNum+1, randomNum+2};
+		
+		//要生成新的ArrayList，String
+		ArrayList<String> locations = new ArrayList<String>(); //记住ArrayList是个对象
+		
+		locations.add(Integer.toString(randomNum));
+		locations.add(Integer.toString(randomNum+1));
+		locations.add(Integer.toString(randomNum+2));
+
+		
 		//将此位置信息赋值
 		theDotCom.setLocationCells(locations);
 		
